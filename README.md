@@ -1,1 +1,1 @@
-# Recommendation-System
+The AASTU Course Recommendation System is a web application designed to help students at Addis Ababa Science and Technology University choose suitable departments and streams. It features an interactive quiz that provides personalized recommendations based on user interests and skills. The system uses JavaScript for dynamic functionality, with main.js handling core logic and a planned quiz.js for quiz features.
