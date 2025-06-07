@@ -1,0 +1,20 @@
+{
+  "name": "idp-444",
+  "version": "1.0.0",
+  "description": "A web-based application to help AASTU students explore departments, streams, and substreams, get personalized recommendations, and understand academic rules.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}

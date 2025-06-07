@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AASTU Course Recommendation System</title>
+
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/global-styles.css" />
+    <link rel="stylesheet" href="CSS/layout-styles.css" />
+    <link rel="stylesheet" href="CSS/component-styles.css" />
+    <link rel="stylesheet" href="CSS/animation-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header with Navigation (NO CHANGES HERE from your original) -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="images/AAST LOGO.png" alt="AASTU Logo" class="logo" />
+          <h1></h1>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#colleges" class="nav-link" >Colleges </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#college-engineering" class="dropdown-link"
+                    >College of Engineering</a
+                  >
+                </li>
+                <li>
+                  <a href="#college-applied-sciences" class="dropdown-link"
+                    >College of Applied Sciences</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li id="recommendation" class="nav-item dropdown">
+              <a href="#recommendations" class="nav-link"
+                >Recommendations  </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#dept-quiz-container" class="dropdown-link"
+                    >Get Department Recommendation</a
+                  >
+                </li>
+                <li>
+                  <a href="#stream-recommendation" class="dropdown-link"
+                    >Get Stream Recommendation</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#rules" class="nav-link">Rules</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile" class="nav-link">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feedback" class="nav-link">Feedback</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-button" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main class="main-content">
+      <section id="home" class="content-section active-section">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h2 class="hero-title">
+              <h1 style="font-size: 35px;">Well Come to AASTU Course Recommendation System</h1>
+            </h2>
+            <p class="hero-text">
+              Our intelligent recommendation system helps you discover the ideal
+              department and specialization based on your skills, interests, and
+              academic performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="features-section">
+          <h2 class="section-title" id="section1">Why Use Our Recommendation System?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-brain"></i></div>
+              <h3>Intelligent Matching</h3>
+              <p>
+                Our algorithm analyzes your profile and preferences to suggest
+                the best academic path for you.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Comprehensive Database</h3>
+              <p>
+                Access detailed information about all departments and
+                specializations at AASTU.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+              <h3>Career-Focused</h3>
+              <p>
+                Recommendations consider future career prospects and industry
+                demands.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h3>Personalized</h3>
+              <p>
+                Tailored suggestions based on your unique profile and academic
+                history.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section">
+          <div class="stat-item">
+            <span class="stat-number" data-target="9">0</span>
+            <span class="stat-label">Engineering Departments</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Applied Science Departments</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="24">0</span>
+            <span class="stat-label">Specializations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5000+">0</span>
+            <span class="stat-label">Students Helped</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colleges Section -->
+      <section id="colleges" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">AASTU Colleges</h2>
+          <p class="section-subtitle">
+            Explore our colleges and their departments
+          </p>
+        </div>
+
+        <div class="college-tabs">
+          <button class="tab-button active" data-tab="college-engineering">
+            College of Engineering
+          </button>
+          <button class="tab-button" data-tab="college-applied-sciences">
+            College of Applied Sciences
+          </button>
+        </div>
+
+        <div id="college-engineering" class="tab-content active">
+          <details>
+            <summary><strong>About engineering </strong></summary>
+            <h3 class="college-title">College of Engineering</h3>
+            <p class="college-description">
+              The College of Engineering at Addis Ababa Science and Technology
+              University (AASTU) is a premier institution dedicated to
+              excellence in engineering education, research, and innovation.
+              Established with the vision of becoming a center of excellence in
+              engineering and technology, the college offers cutting-edge
+              programs designed to prepare students for the challenges of modern
+              engineering practice and research in Ethiopia and beyond.
+            </p>
+
+            <p class="college-description">
+              Our college is committed to producing highly skilled engineers who
+              can contribute to the technological and industrial development of
+              the nation. With state-of-the-art laboratories, experienced
+              faculty, and strong industry partnerships, we provide students
+              with both theoretical knowledge and practical skills.
+            </p>
+          </details>
+
+          <h4 class="dept-list-title">Engineering Departments</h4>
+          <ul class="department-list">
+            <li class="department-item">
+              <a href="data/ece.pdf" target="_blank" class="dept-image-link">
+                <img
+                  src="images/electrical.png"
+                  alt="Electrical and Computer Engineering icon"
+                />
+                <span>Electrical & Computer Eng.</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a href="data/civil.pdf" target="_blank" class="dept-image-link">
+                <img src="images/civel.png" alt="Civil Engineering icon" />
+                <span>Civil Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/mechanical.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img
+                  src="images/mechanical.png"
+                  alt="Mechanical Engineering icon"
+                />
+                <span>Mechanical Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/chemical.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img src="images/che.png" alt="Chemical Engineering icon" />
+                <span>Chemical Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a href="data/mining.pdf" target="_blank" class="dept-image-link">
+                <img src="images/min.png" alt="Mining Engineering icon" />
+                <span>Mining Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/software.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img
+                  src="images/software.png"
+                  alt="Software Engineering icon"
+                />
+                <span>Software Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/electro-mechanical.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img
+                  src="images/electromechanical.png"
+                  alt="Electro-mechanical Engineering icon"
+                />
+                <span>Electro-mechanical Eng.</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/architecture.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img src="images/arc.png" alt="Architecture Engineering icon" />
+                <span>Architecture Engineering</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/enviromental.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img
+                  src="images/enviromenatal.png"
+                  alt="Environmental Engineering icon"
+                />
+                <span>Environmental Engineering</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="college-applied-sciences" class="tab-content">
+          <details>
+            <summary><strong>About applied Scince</strong></summary>
+            <h3 class="college-title">College of Applied Sciences</h3>
+            <p class="college-description">
+              The College of Applied Sciences at AASTU focuses on the
+              application of scientific knowledge to solve practical problems in
+              various fields. Our programs combine rigorous academic training
+              with hands-on experience to prepare students for careers in
+              rapidly evolving scientific and technological fields.
+            </p>
+
+            <p class="college-description">
+              With a focus on innovation and practical application, the college
+              emphasizes interdisciplinary approaches to solving real-world
+              problems. Our graduates are equipped with both the technical
+              skills and theoretical understanding needed to excel in their
+              chosen fields and contribute to Ethiopia's scientific and
+              technological advancement.
+            </p>
+          </details>
+
+          <h4 class="dept-list-title">Applied Science Departments</h4>
+          <ul class="department-list">
+            <li class="department-item">
+              <a
+                href="data/biotech.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img src="images/bio.png" alt="Biotechnology icon" />
+                <span>Biotechnology</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/food-science.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img
+                  src="images/foo.png"
+                  alt="Food Science and Technology icon"
+                />
+                <span>Food Science & Tech.</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/applied-chemistry.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img src="images/indu.png" alt="Applied Chemistry icon" />
+                <span>Applied Chemistry</span>
+              </a>
+            </li>
+            <li class="department-item">
+              <a
+                href="data/geology.pdf"
+                target="_blank"
+                class="dept-image-link"
+              >
+                <img src="images/geo.png" alt="Geology icon" />
+                <span>Geology</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Recommendations Section  -->
+      <section id="recommendations" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Recommendations</h2>
+          <p class="section-subtitle">
+            Get personalized recommendations
+          </p>
+        <div id="quiz-selection">
+          <button onclick="startQuiz('department')">
+            Department Recommendation
+          </button>
+          <button onclick="startQuiz('stream')">Stream Recommendation</button>
+        </div>
+        <div id="department-selection">
+          <label for="department-dropdown">Select your department:</label>
+          <select id="department-dropdown">
+            <option value="">Select Department</option>
+            <option value="ece">Electrical and Computer Engineering</option>
+            <option value="civil">Civil Engineering</option>
+            <option value="mech">Mechanical Engineering</option>
+          </select>
+          <button onclick="startStreamQuiz()">Start Stream Quiz</button>
+        </div>
+        <div id="quiz-container">
+          <div id="question" class="question"></div>
+          <div id="options"></div>
+          <div id="Option_Button">
+            <button id="back-btn" onclick="goBack()">Back</button>
+            <button id="next-btn" onclick="nextQuestion()" style="display: none">
+              Next
+            </button>
+          </div>
+        </div>
+        <div id="result"></div>
+      </section>
+
+      <!-- Rules Section (NO CHANGES HERE from your original) -->
+      <section id="rules" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Academic Rules & Regulations</h2>
+          <p class="section-subtitle">
+            Important policies and guidelines for AASTU students
+          </p>
+        </div>
+
+        <div class="rules-accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Admission Requirements</h5>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                AASTU has specific admission requirements for all academic
+                programs:
+              </p>
+              <ul>
+                <li>
+                  Passing score on the Ethiopian Higher Education Entrance
+                  Examination
+                </li>
+                <li>Meeting specific department cut-off points</li>
+                <li>Original and copy of academic credentials</li>
+                <li>Completed application form</li>
+              </ul>
+              <p>International students must additionally provide:</p>
+              <ul>
+                <li>
+                  Equivalence certificate from Ethiopian Higher Education
+                  Relevance and Quality Agency
+                </li>
+                <li>Valid student visa</li>
+                <li>
+                  English proficiency test results (for non-English speaking
+                  countries)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Grading System</h5>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>AASTU uses the following grading scale for all courses:</p>
+              <ul>
+                <li>A+: 90-100% (4.0)</li>
+                <li>A: 85-89% (4.0)</li>
+                <li>A-: 80-84% (3.75)</li>
+                <li>B+: 75-79% (3.5)</li>
+                <li>B: 70-74% (3.0)</li>
+                <li>B-: 65-69% (2.750)</li>
+                <li>C+: 60-65% (2.50)</li>
+                <li>C: 60-50% (2.0)</li>
+                <li>F: Below 50% (0.0)</li>
+              </ul>
+              <p>Additional grading notations:</p>
+              <ul>
+                <li>
+                  I: Incomplete (must be completed within 4 weeks of next
+                  semester)
+                </li>
+                <li>W: Withdrawal without academic penalty</li>
+                <li>P: Pass (for non-graded courses)</li>
+                <li>NG: No grade reported</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Academic Standing</h5>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>Student academic status is determined by CGPA:</p>
+              <ul>
+                <li><strong>Good Standing:</strong> CGPA ≥ 2.0</li>
+                <li>
+                  <strong>Academic Warning:</strong> 1.5 ≤ CGPA < 2.0 for one
+                  semester
+                </li>
+                <li>
+                  <strong>Academic Probation:</strong> CGPA < 1.5 for two
+                  consecutive semesters
+                </li>
+                <li>
+                  <strong>Academic Dismissal:</strong> CGPA < 1.5 for three
+                  consecutive semesters
+                </li>
+              </ul>
+              <p>Probationary students must:</p>
+              <ul>
+                <li>Meet with academic advisor to develop improvement plan</li>
+                <li>Limit course load to 12-15 credits</li>
+                <li>Repeat courses with grades of D or F</li>
+                <li>Achieve minimum semester GPA of 2.0 to continue</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Graduation Requirements</h5>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>To graduate from AASTU, students must:</p>
+              <ul>
+                <li>
+                  Complete all required courses in their program with minimum
+                  CGPA of 2.0
+                </li>
+                <li>
+                  Complete all practical training requirements
+                  (internship/co-op)
+                </li>
+                <li>Clear all financial obligations to the university</li>
+                <li>Submit graduation application by published deadline</li>
+                <li>
+                  Complete senior project/thesis if required by department
+                </li>
+                <li>Meet all attendance and conduct requirements</li>
+              </ul>
+              <p>Additional requirements for honors:</p>
+              <ul>
+                <li><strong>Cum Laude:</strong> CGPA 3.5-3.74</li>
+                <li><strong>Magna Cum Laude:</strong> CGPA 3.75-3.89</li>
+                <li><strong>Summa Cum Laude:</strong> CGPA 3.9-4.0</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Code of Conduct</h5>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                AASTU maintains high standards of academic and personal conduct:
+              </p>
+              <ul>
+                <li>
+                  <strong>Academic Integrity:</strong> No cheating, plagiarism,
+                  or falsification of academic work
+                </li>
+                <li>
+                  <strong>Attendance:</strong> Minimum 80% attendance required
+                  for all courses
+                </li>
+                <li>
+                  <strong>Behavior:</strong> Respect for all members of
+                  university community
+                </li>
+                <li>
+                  <strong>Property:</strong> Proper care of university
+                  facilities and equipment
+                </li>
+                <li>
+                  <strong>Dress Code:</strong> Appropriate attire for academic
+                  environment
+                </li>
+              </ul>
+              <p>Violations may result in:</p>
+              <ul>
+                <li>Warning or reprimand</li>
+                <li>Grade reduction or course failure</li>
+                <li>Suspension or dismissal</li>
+                <li>Legal action for serious offenses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- profile sections (NO CHANGES HERE from your original)-->
+      <section id="profile" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Your Profile</h2>
+          <p class="section-subtitle">
+            Complete your profile for better recommendations
+          </p>
+        </div>
+
+        <form id="profile-form" class="profile-form">
+          <div class="form-section">
+            <h3 class="form-section-title">Personal Information</h3>
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full-name" required />
+            </div>
+            <div class="form-group">
+              <label for="ID_Number">Student ID (Optional)</label>
+              <input type="text" id="ID_Number" name="ID_Number" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="form-section-title">Academic Information (Optional)</h3>
+            <div class="form-group">
+              <label for="current-cgpa">Current CGPA</label>
+              <input
+                type="number"
+                id="current-cgpa"
+                name="current-cgpa"
+                min="0"
+                max="4"
+                step="0.01"
+              />
+            </div>
+            <div class="form-group">
+              <label for="year-level">Year Level/Batch</label>
+              <select id="year-level" name="year-level">
+                <option value="Null">Select Year Level</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+                <option value="5th Year">5th Year</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="current-dept">Current Department</label>
+              <select id="current-dept" name="current-dept">
+                <option value="">Select Department</option>
+                <option value="Freshman">Freshman</option>
+                <option value="mechanical">Mechanical Engineering</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="architecture">Architecture Engineering</option>
+                <option value="electro-mechanical">
+                  Electro-Mechanical Engineering
+                </option>
+                <option value="software">Software Engineering</option>
+                <option value="industrial">Industrial Chemical</option>
+                <option value="geology">Geology Engineering</option>
+                <option value="electrical and computer">
+                  Electrical and Computer Engineering
+                </option>
+                <option value="chemical">Chemical Engineering</option>
+                <option value="biotechnology">Biotechnology</option>
+                <option value="food">Food Engineering</option>
+                <option value="mining">Mining Engineering</option>
+                <option value="enviromental">Environmental Engineering</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Profile</button>
+            <button type="button" class="btn btn-secondary" id="clear-profile">
+              Clear Form
+            </button>
+          </div>
+          <div id="form-message" style="margin-top: 10px"></div>
+        </form>
+      </section>
+
+      <!-- Feedback Section -->
+      <section id="feedback" class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Feedback</h2>
+          <p class="section-subtitle">
+            We value your opinion about our recommendation system
+          </p>
+        </div>
+
+        <form id="feedback-form" class="feedback-form">
+          <div class="form-group">
+            <label for="feedback-type">Feedback Type</label>
+            <select id="feedback-type" name="feedback-type" required>
+              <option value="" disabled selected>Select feedback type</option>
+              <option value="Suggestion">Suggestion</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="Compliment">Compliment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-message">Your Feedback/Message</label>
+            <textarea
+              id="feedback-message"
+              name="feedback-message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-email">Email</label>
+            <input
+              type="email"
+              id="feedback-email"
+              name="feedback-email"
+              required
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              Submit Feedback
+            </button>
+          </div>
+          <p id="form-error" class="error"></p>
+        </form>
+
+        <div id="thank-you-message" class="thank-you-message hidden">
+          <div class="thank-you-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>Thank You for Your Feedback!</h3>
+          <p>
+            We appreciate you taking the time to help us improve our system.
+          </p>
+          <button class="btn btn-secondary" id="new-feedback">
+            Submit Another Feedback
+          </button>
+        </div>
+
+        <!-- Feedback List -->
+        <!-- <div class="feedback-list">
+          <h3>Existing Feedback</h3>
+          <div id="feedback-list"></div>
+        </div> -->
+      </section>
+    </main>
+
+    <!-- Footer (NO CHANGES HERE from your original) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">About AASTU</h3>
+          <p>
+            Addis Ababa Science and Technology University is a leading
+            institution in Ethiopia dedicated to excellence in science,
+            technology, and innovation.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home" class="nav-link footer-nav">Home</a></li>
+            <li><a href="#colleges" class="nav-link footer-nav">Colleges</a></li>
+            <li><a href="#recommendations" class="nav-link footer-nav">Recommendations</a></li>
+            <li><a href="#rules" class="nav-link footer-nav">Rules</a></li>
+            <li><a href="#profile" class="nav-link footer-nav">Profile</a></li>
+            <li><a href="#feedback" class="nav-link footer-nav">Feedback</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Contact</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-phone"></i> +251 11 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@aastu.edu.et</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 AASTU Course Recommendation System. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts (NO CHANGES HERE from your original) -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

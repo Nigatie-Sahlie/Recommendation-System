@@ -1,0 +1,791 @@
+/* Component styles */
+.hero-section {
+  position: relative;
+  height: 500px;
+  background: url("../images/Background3.jpg") no-repeat center center;
+  background-size: cover;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 80%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: aqua; */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 0 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.stat-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.college-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-button:hover {
+  color: var(--secondary-color);
+}
+
+.tab-button.active {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.college-title {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.college-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.dept-list-title {
+  margin: 2rem 0 1rem;
+  color: var(--primary-color);
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.dept-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.dept-link:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: translateX(5px);
+}
+
+.dept-link i {
+  color: var(--secondary-color);
+}
+
+.dept-link:hover i {
+  color: white;
+}
+
+.recommendation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recommendation-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+}
+
+.recommendation-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.recommendation-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.recommendation-card p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.stream-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.quiz-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-header h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.quiz-progress {
+  height: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.quiz-question-number {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-option {
+  padding: 1rem;
+  background-color: #f5f7fa;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quiz-option:hover {
+  background-color: #e1e5eb;
+}
+
+.quiz-option.selected {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendation-results {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.result-title {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.result-subtitle {
+  color: var(--text-light);
+}
+
+.result-content {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+}
+
+.result-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-score {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.result-description {
+  margin: 1rem 0;
+  line-height: 1.7;
+}
+
+.result-details {
+  margin-top: 1rem;
+}
+
+.result-details h5 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.result-details ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.other-options {
+  margin-top: 2rem;
+}
+
+.option-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+}
+
+.option-card h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.rules-accordion {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header h5 {
+  color: var(--primary-color);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  padding: 1rem;
+}
+
+.profile-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.form-section-title {
+  margin: 0 auto;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-rating {
+  display: grid;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.rating-star {
+  color: #ddd;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.rating-star.active,
+.rating-star:hover {
+  color: #f1c40f;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ddd;
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f1c40f;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.thank-you-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.thank-you-icon {
+  font-size: 3rem;
+  color: var(--success-color);
+  margin-bottom: 1rem;
+}
+
+.thank-you-message h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.search-results-container {
+  margin-top: 2rem;
+}
+
+.search-filters {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  padding: 1.5rem;
+}
+
+.course-code {
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.course-title {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.course-description {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.no-results h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-success {
+  background-color: var(--success-color);
+}
+
+.toast-error {
+  background-color: var(--danger-color);
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.is-invalid {
+  border-color: var(--danger-color) !important;
+}
+
+.department-list {
+  list-style: none; /* Removes default bullet points */
+  padding: 0; /* Removes default padding */
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+  gap: 20px; /* Creates space between the department items */
+  justify-content: center; /* Centers the items if they don't fill the full width */
+  margin-top: 20px; /* Adds some space above the list */
+  margin-bottom: 30px; /* Adds some space below the list */
+}
+
+.department-item {
+  width: 160px; /* Sets a width for each department item box */
+  /* Adjust this width as needed for your layout, e.g., 180px, 200px */
+  /* Consider using percentages for a more responsive grid if needed */
+  text-align: center; /* Centers the image and text within each item */
+  display: flex; /* To help with consistent height if items have different content length */
+  flex-direction: column; /* Stacks image and text vertically */
+}
+
+.dept-image-link {
+  display: flex; /* Use flex for internal alignment */
+  flex-direction: column; /* Stack image above text */
+  justify-content: flex-start; /* Align content to the top, good for uniform look */
+  align-items: center; /* Center content horizontally within the link */
+  text-decoration: none; /* Removes the default underline from links */
+  color: #333; /* Sets the text color for the department name */
+  border: 1px solid #e0e0e0; /* Adds a light border around the item */
+  border-radius: 8px; /* Rounds the corners of the item box */
+  padding: 15px 10px; /* Adds padding inside the item box */
+  background-color: #ffffff; /* White background for the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%; /* Makes the link fill the .department-item, helps with consistent height if .department-item uses flex */
+  width: 100%; /* Ensure link takes full width of its parent .department-item */
+}
+
+.dept-image-link:hover,
+.dept-image-link:focus {
+  transform: translateY(-5px); /* Lifts the item slightly on hover/focus */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhances the shadow on hover/focus */
+  color: #0056b3; /* Example: Darker blue on hover for text */
+  border-color: #007bff; /* Example: Highlight border on hover */
+}
+
+.dept-image-link img {
+  max-width: 100%; /* Ensures the image doesn't overflow its container */
+  height: 80px; /* Fixed height for images to maintain uniformity. Adjust as needed. */
+  width: 80px; /* Fixed width, making it square. Adjust if your images are not square. */
+  object-fit: contain; /* Scales image to fit within bounds while maintaining aspect ratio. Use 'cover' if you want it to fill and crop. */
+  margin-bottom: 10px; /* Space between the image and the text */
+  border-radius: 4px; /* Optional: slightly rounded corners for the image itself */
+}
+
+.dept-image-link span {
+  font-size: 0.9em; /* Adjust font size for the department name */
+  font-weight: 500; /* Slightly bolder text */
+  line-height: 1.3; /* Improves readability of department names if they wrap */
+  display: block; /* Ensures the span takes up its own line if needed */
+  margin-top: auto; /* Pushes the text to the bottom, useful if image containers cause slight variations */
+  color: #333; /* Ensure text color is consistent, can be overridden by hover state */
+}
+
+/* Responsive adjustments (Example for smaller screens) */
+@media (max-width: 768px) {
+  .department-item {
+    width: calc(
+      50% - 15px
+    ); /* 2 items per row, (gap / 2) = 10px for a 20px gap. Adjust if gap changes */
+  }
+  .dept-image-link {
+    padding: 10px;
+  }
+  .dept-image-link img {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-item {
+    width: calc(
+      100% - 20px
+    ); /* 1 item per row on very small screens, with some margin if gap is still 20px */
+    /* Or simply width: 100%; if the parent department-list handles spacing */
+  }
+  .department-list {
+    gap: 15px; /* Reduce gap on smaller screens */
+  }
+  .dept-image-link img {
+    height: 60px;
+    width: 60px;
+  }
+  .dept-image-link span {
+    font-size: 0.85em;
+  }
+}
